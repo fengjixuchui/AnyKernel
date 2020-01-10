@@ -45,14 +45,19 @@ bb=/tmp/anykernel/tools/busybox;
 ui_print "$(file_getprop /tmp/anykernel/anykernel.sh kernel.string)";
 ui_print " ";
 ui_print " ______________________________________________ ";
+ui_print "                                                ";
 ui_print "          ____  ____  ____  _   _____           ";
 ui_print "         / __ \/ __ \/ __ \/ | / /   |          "; 
 ui_print "        / / / / /_/ / / / /  |/ / /| |          ";    
 ui_print "       / /_/ / _, _/ /_/ / /|  / ___ |          ";
 ui_print "      /_____/_/ |_|\____/_/ |_/_/  |_|          ";
-ui_print "                    KERNEL                      ";
+ui_print "                                                ";
 ui_print " ______________________________________________ ";
-ui_print " ________________By @ShivamJadon_______________ ";
+ui_print "                                                ";
+ui_print " Kernel   : Drona Kernel                        ";
+ui_print " Developer: Shivam Jadon                        ";
+ui_print " Support  : Oreo/Pie/Q                          ";
+ui_print "                                                ";
 ui_print " ";
 umount /system;
 mount -o rw -t auto /system;
@@ -74,19 +79,19 @@ if [ "$(file_getprop /tmp/anykernel/anykernel.sh do.devicecheck)" == 1 ]; then
   fi;
 fi;
 if [ "$(file_getprop /tmp/anykernel/anykernel.sh do.initd)" == 1 ]; then
-  ui_print ".**************************************.";
+  ui_print ".Anykernel3.";
   mkdir /system/etc/init.d;
   set_perm_recursive 0 0 0755 0755 /system/etc/init.d;
 fi;
 
 if [ "$(file_getprop /tmp/anykernel/anykernel.sh do.system)" == 1 ]; then
-  ui_print ".+++++++++adding load shifter++++++++++.";
+  ui_print ".osm0sis.";
   ui_print ".                                      .";
   cp -fr /tmp/anykernel/system/* /system/;
   set_perm_recursive 0 0 0755 0755 /system/etc/init.d/Velocity;
 fi;
 
-ui_print "Installing kernel...";
+ui_print "Installing Drona kernel...";
 for i in $($bb --list); do
   $bb ln -s $bb /tmp/anykernel/bin/$i;
 done;

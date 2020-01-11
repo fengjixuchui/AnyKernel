@@ -3,7 +3,7 @@
 
 ## AnyKernel setup
 # EDIFY properties
-kernel.string=DRONA KERNEL
+kernel.string=Drona by shivam
 do.devicecheck=1
 do.modules=1
 do.cleanup=1
